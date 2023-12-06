@@ -47,7 +47,7 @@ function Individual(name,forename){
 let indivd = new Individual("Baze","Racheal" )
 console.log(indivd.getfullname())
 
-//javascript constructor/prototype object  parttern creation and refrences
+//javascript constructor/prototype object  pattern creation and refrences
 function Person3(firstName, lastName) {
   this.firstName = firstName;
   this.lastName = lastName;
@@ -63,7 +63,7 @@ let p2 = new Person3('Jane', 'Doevgh');
 console.log(p1.getFullName());
 console.log(p2.getFullName());
 
-//using the class keyword for constructor/prototype  parttern declaration ES6
+//using the class keyword for constructor/prototype  pattern declaration ES6
 class Person {
 	constructor(firstName, lastName) {
 		this.firstName = firstName;
@@ -78,4 +78,4 @@ let p11 = new Person('John', 'Doe');
 let p21 = new Person('Jane', 'Doe');
 
 console.log(p11.getFullName());
-console.log(p22.getFullName());
+console.log(p21.getFullName());
