@@ -74,3 +74,55 @@ let newproduct={
 }
 let result=Object.getOwnPropertyDescriptor(newproduct,'name')
 console.log(result)
+
+//using a "for...in"loop on enumerable objects
+var homosapian={
+  firstName: 'Johnnah',
+  lastName: 'Doewah',
+  ssn: '299-24-2351'
+}
+for(var prop in homosapian){
+  console.log(prop + ": "+homosapian[prop])
+}
+
+//for in loop and inheritance
+var decoration ={
+  color :'sky-blue'
+
+}
+let circle=Object.create(decoration)
+circle.radius = 12;
+for(var prp in circle){
+  console.log(prp + ": "+circle[prp])
+}
+//to display only properties belonging to the circle object use hasOwnProperty
+var decoration1={
+  color :'Golden-yellow'
+
+}
+let circle1=Object.create(decoration1)
+circle1.cumfrance = 12;
+for(var prp in circle1){
+  if(circle1.hasOwnProperty(prp)){
+    console.log(prp + ": "+circle1[prp])
+  }
+  
+}
+//using for in loop with arrays
+Array.prototype.foo =100
+const items = [10,40,30]
+let total = 0
+for(var item in items){
+  console.log('prop' + {item , value: items[item]})
+  total += items[item]
+}
+console.log(total)
+
+//Another example
+var arr = [];
+// set the third element to 3, other elements are `undefined`
+arr[2] = 3; 
+
+for (let i = 0; i < arr.length; i++) {
+    console.log(arr[i]);    
+}
